@@ -82,14 +82,7 @@ public Optional<dane> FindOneRow(@PathVariable long id) {
 }
 
 
-//na ten moment endpoint nieużywany
-@ResponseBody
-@PostMapping("/dodajKod")
-public String addKod(@RequestBody dane dane) {
-	
-	crud.save(dane);
-	return "Kod dodany";
-}
+
 
 
 
