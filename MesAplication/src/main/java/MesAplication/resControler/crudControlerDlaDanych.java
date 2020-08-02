@@ -13,9 +13,7 @@ public interface crudControlerDlaDanych extends JpaRepository<dane,Long> {
 	
 	List<dane> findByMaterial(String material);
 	
-	
-	//*List<dane> findByMaterialLike(String material);
-	
+
 	
 	Collection<materialOnly> findDistinctByMaterialLike(String material);
 	
