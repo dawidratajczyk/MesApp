@@ -26,7 +26,7 @@ crudControlerDlaDanych crud;
 
 
 
-//na ten moment endpoint nieużywany
+//endpoint nieużywany
 @GetMapping("/marszruta")
 public ModelAndView showMarszruta() {
 	List<dane> lista = crud.findAll();
@@ -69,21 +69,6 @@ public ModelAndView showMarszrutatest(@RequestParam(required = false,defaultValu
 
 }
 
-
-//na ten moment endpoint nieużywany
-@ResponseBody
-@GetMapping("/test")
-public List<dane>  marszruta(){
-	List<dane> lista = crud.findAll();
-	lista.forEach(dane->{
-	String czas = dane.getWartoscstandardowa2();
-	czas = czas.replace(',','.');
-	dane.setNorma(60/Double.parseDouble(czas));
-	});
-	
-	return lista;
-	
-}
 
 
 @ResponseBody
